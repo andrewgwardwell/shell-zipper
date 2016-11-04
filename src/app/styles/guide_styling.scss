@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+}
+
+[class$='--darkblue']{
+	background: $darkblue;
+}
+[class$='--midblue']{
+	background: $midblue;
+}
+[class$='--lightblue']{
+	background: $lightblue;
+}
+[class$='--owblue']{
+	background: $owblue;
+}
+[class$='--darkgreen']{
+	background: $darkgreen; 
+}
+[class$='--lightgreen']{
+	background: $lightgreen; 
+}
+[class$='--owgreen']{
+	background: $owgreen;
+}
+[class$='--red']{
+	background: $red;
+}
+[class$='--purple']{
+	background: $purple;
+}
+[class$='--tan']{
+	background: $tan;
+}
+[class$='--ow']{
+	background: $ow;
+}
+
+[class$='--darkblue--color'] > *{
+	color: $darkblue;
+}
+[class$='--midblue--color'] > *{
+	color: $midblue;
+}
+[class$='--lightblue--color'] > *{
+	color: $lightblue;
+}
+[class$='--owblue--color'] > *{
+	color: $owblue;
+}
+[class$='--darkgreen--color'] > *{
+	color: $darkgreen; 
+}
+[class$='--lightgreen--color'] > *{
+	color: $lightgreen; 
+}
+[class$='--owgreen--color'] > *{
+	color: $owgreen;
+}
+[class$='--red--color'] > *{
+	color: $red;
+}
+[class$='--purple--color'] > *{
+	color: $purple;
+}
+[class$='--tan--color'] > *{
+	color: $tan;
+}
+[class$='--ow--color'] > *{
+	color: $ow;
+}
+
+.swatch{
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	float: left;
+	border: 1px solid black;
+}
+
+.text-box{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	span{
+		font-weight: 700;
+		font-size: 34px;
+	}
+}
+
+p, h1, h2, h3, h4, h5, span, strong, em, a, div, label{
+	font-family: 'Lato', sans-serif;
+}
+.container-fluid{
+	text-align: center;
+	color: $dark-grey__font;
+	.row{
+		// border: .5px solid $grey__font;
+		line-height: 50px;
+	}
+	[class^="col"]{
+		border: .5px dotted black;
+	}
+}

@@ -1,0 +1,108 @@
+// Menu Bar
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+// default - float left
+//
+// markup:
+// <div class="menu-bar {$modifiers}">
+//  <div class="menu-title title-wrapper">
+//     <span class="glyphicon glyphicon-time"></span>
+//     <h2 class="title"><strong>History</strong> Manager</h2>
+//  </div>
+//  <div class="button-wrapper">
+//	<a class="btn primary btn--modal menu-item" href="#" role="button">
+// 		One Page
+//	</a>
+//	<a class="btn primary btn--modal menu-item" href="#" role="button">
+// 		Second One
+//	</a>
+// </div>
+// </div>
+//
+// Styleguide 6.1
+
+.menu-bar{
+	background: $midblue__menu;
+	padding: 10px 0px 10px 20px;
+	overflow: hidden;
+	.title-wrapper,
+	.button-wrapper{
+		height: 30px;
+	}
+	.title-wrapper{
+		float: left;
+	}
+	.button-wrapper{
+		float:right;
+		text-align: right;
+	}
+	.menu-title{
+		padding-top: 5px;
+		h2{
+			font-size: 20px;
+			display: inline;
+			font-weight: 100;
+			color: #fff;
+			margin: 0;
+			strong{
+				// display: inline-block;
+				font-weight: 500;
+				color: #fff;
+			}
+		}
+		.glyphicon{
+			color: $darkblue__menu;
+			margin-right: 10px;
+		}
+	}
+}
+
+// Menu Items
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+// active - active state
+// :hover - hover state
+//
+// markup:
+// <div class="menu-bar">
+//  <div class="menu-title title-wrapper">
+//     <span class="glyphicon glyphicon-time"></span>
+//     <h2 class="title"><strong>History</strong> Manager</h2>
+//  </div>
+//  <div class="button-wrapper">
+//	<a class="btn primary btn--modal menu-item" href="#" role="button">
+// 		One Page
+//	</a>
+//	<a class="btn primary btn--modal menu-item {$modifiers}" href="#" role="button">
+// 		Second One
+//	</a>
+//	<a class="btn primary btn--modal menu-item" href="#" role="button">
+// 		Three Page
+//	</a>
+//	<a class="btn primary btn--modal menu-item" href="#" role="button">
+// 		Four Page
+//	</a>
+// </div>
+// </div>
+//
+// Styleguide 6.2
+
+.menu-item{
+	background: $midblue__menu;
+	margin: 0 10px;
+	display: inline-block;
+	font-weight: 100;
+	&:hover{
+		background: $lightblue__menu;
+		color: $ow;
+		font-weight: 300;
+	}
+}
+.menu-item.active{
+	background: $lightblue__menu;
+	box-shadow: none;
+	color: $ow;
+	font-weight: 300;
+}

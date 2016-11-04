@@ -1,0 +1,83 @@
+// Variables
+//
+// Variables include colors, fonts, grids, and spacing.
+//
+// Styleguide 1.0
+
+// Background Colors
+// 
+// Background colors can be acheived using the BEM methodology. Append "--{nameOfColor}" to the end of your main class and add to text string.
+// Such as "swatch swatch--darkblue" for a darkblue background.
+//
+// --darkblue - dark blue
+// --midblue - mid blue
+// --lightblue - light blue
+// --owblue - off white blue
+// --darkgreen - dark green
+// --lightgreen - light green
+// --owgreen - off white green
+// --red - red
+// --purple - purple
+// --tan - tan
+// --ow - off white
+//
+// markup:
+// <div class="swatch swatch{$modifiers}">
+// </div>
+//
+// Styleguide 1.1
+
+// Blues
+$darkblue: #14347A;
+$midblue: #5991dd;
+$lightblue: #ACBDE3;
+$owblue: #E1E7F2;
+
+//Greens
+$darkgreen: #32BFBB;
+$lightgreen: #A7D4B6;
+$owgreen: #F3FAF2;
+
+//Red
+$red: #DB544D;
+
+//Purple
+$purple: #744C75;
+
+//Tan
+$tan: #E8B3A2;
+
+//Elements
+$grey__form: #c8c8c8;
+
+//Menu
+$lightblue__menu: #5991dd;
+$midblue__menu: #4684d9;
+$darkblue__menu: #386db8;
+
+//Fonts
+$grey__font: #b7babe;
+$dark-grey__font: #868b92;
+
+//Off White
+$ow: #FCFAFA;
+
+// Font Colors
+//
+// --darkblue--color - dark blue
+// --midblue--color - mid blue
+// --lightblue--color - light blue
+// --owblue--color - off white blue
+// --darkgreen--color - dark green
+// --lightgreen--color - light green
+// --owgreen--color - off white green
+// --red--color - red
+// --purple--color - purple
+// --tan--color - tan
+// --ow--color - off white
+//
+// markup:
+//<div class="text-box text-box{$modifiers}"><span>Text Example</span></div>
+//
+// Styleguide 1.2
+

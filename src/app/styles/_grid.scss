@@ -1,0 +1,44 @@
+// Grid System
+//
+// Based on the bootstrap grid this has been altered slightly to give us a good base toward our custom styles.
+//
+// default - bootstrap
+// container--full - a container that spans the entire 100%
+// 
+// markup:
+// <div class="container-fluid {$modifiers}">
+//   <div class="row">
+// 		A row
+//   </div>
+//   <div class="row">
+// 		<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+// 		<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+//		<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
+//   </div>
+//   <div class="row">
+// 		<div class="col-xs-12 col-md-6">.col-xs-12 .col-md-6
+//			<div class="row">
+//				<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
+//				<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
+//				<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
+//			</div>
+//      </div>
+// 		<div class="col-xs-6 col-md-3 col-xs-offset-6 col-md-offset-3">
+//			.col-xs-6 .col-md-3 .col-md-offset-3
+//			<div class="row">
+//				<div class="col-xs-12 col-md-12">.col-xs-12 .col-md-12</div>
+//				<div class="col-xs-12 col-md-12">.col-xs-12 .col-md-12</div>
+//          </div>
+//      </div>
+//   </div>
+//   <div class="row">
+//		<div class="col-xs-12 col-md-12">.col-xs-12 .col-md-12</div>
+//   </div>
+// </div>
+//
+// Styleguide 2.0
+
+.container--full{
+	padding-left: 0;
+	padding-right: 0;
+}

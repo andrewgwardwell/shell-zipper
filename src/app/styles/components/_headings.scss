@@ -1,0 +1,105 @@
+// Headings
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+//
+// markup:
+// <h1>h1. Heading </h1>
+// <h2>h2. Heading </h2>
+// <h3>h3. Heading </h3>
+// <h4>h4. Heading </h4>
+// <h5>h5. Heading </h5>
+// <h6>h6. Heading </h6>
+//
+// Styleguide 3.1
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Lato', sans-serif !important;
+	color: $dark-grey__font;
+}
+
+// Headings Variations
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+// light - weight
+// soft-grey - color
+// white - color
+// 
+// markup:
+// <h1>h1. Heading (Normal)</h1>
+// <h1 class="{$modifiers}">h1. Heading </h1>
+//
+// Styleguide 3.2
+
+.light{
+	font-weight: 300;
+}
+.soft-grey{
+	color: $grey__font;
+}
+.white{
+	color: $ow;
+}
+
+// Body
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+// light - weight
+// soft-grey - color
+// white - color
+// lead - make it stand out
+// 
+// markup:
+// <p class="{$modifiers}"> Paragraph </p></br>
+// <span class="{$modifiers}"> Span </span></br>
+//
+// Styleguide 3.3
+
+p, span, label, strong, em{
+	font-family: 'Lato', sans-serif;
+	color: $dark-grey__font;
+}
+
+// Title
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles. Inline style used only for the benefit of the styleguide.
+// 
+// markup:
+//  <div class="title title-wrapper" width:"35%">
+// 		<div class="left">
+//     		<span class="glyphicon glyphicon-time"></span>
+// 		</div>
+// 		<div class="right">
+// 	   		<h4 class="title-text super-title">Welcome to the</h4>
+//     		<h2 class="title-text sub-title">History Manager</h2>
+// 		</div>
+//  </div>
+//
+// Styleguide 3.4
+
+.title{
+	.right,
+	.left{
+		float:left;
+	}
+	.left{
+		margin-right: 20px;
+	}
+	.glyphicon{
+		font-size: 60px;
+		color: $midblue__menu;
+		margin-top: 10px;
+		@include font_light;
+	}
+	.right{
+		h4{
+			margin-bottom: 5px;
+			@include font_light;
+		}
+		h2{
+			margin-top: 5px;
+		}
+	}
+}

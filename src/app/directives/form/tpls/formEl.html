@@ -1,0 +1,22 @@
+<div class="form-group" >
+{{type}}
+<div class="wrapper dropdown" ng-show="type == 'dropdown'">
+  <span>Selected: {name: {{selected.value.name}}, id: {{selected.value.id}} }</span>
+  <ui-select ng-model="selected.value">
+    <ui-select-match>
+        <span ng-bind="selected.value.name"></span>
+        <span class="glyphicon glyphicon-search"></span>
+    </ui-select-match>
+    <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id" group-by="groupBy">
+        <span ng-class="'hierarchy--' + item.level" ng-bind="item.name"></span>
+    </ui-select-choices>
+  </ui-select>
+</div>
+
+
+<div class="wrapper" ng-show="type == 'date'">
+	    <div style="display:inline-block; min-height:290px;">
+	      <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+	    </div>
+</div>
+</div>

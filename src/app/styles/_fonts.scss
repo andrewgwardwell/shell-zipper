@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+@mixin font_bold() {
+	font-weight: 900;
+}
+
+@mixin font_mid() {
+	font-weight: 300;
+}
+
+@mixin font_light() {
+	font-weight: 100;
+}
+
+@mixin font_bold_i() {
+	@include font_bold;
+	font-style: italic;
+}
+
+@mixin font_light_i() {
+	@include font_light;
+	font-style: italic;
+}

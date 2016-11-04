@@ -1,0 +1,50 @@
+// Buttons
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+// btn-xs - small button
+// btn-sm - small button
+// btn-lrg - large button
+// pale - pale button
+//
+// markup:
+//<a class="btn primary {$modifiers}" href="#" role="button">Link</a>
+//
+// Styleguide 4.1
+.btn{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.primary{
+	color: #fff;
+	background: $midblue__menu;
+}
+.pale{
+	background: $lightblue__menu;
+}
+
+// Modal Buttons
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+// btn-xs - small button
+// btn-sm - small button
+// btn-lrg - large button
+// pale - pale button
+//
+// markup:
+//<a class="btn primary btn--modal {$modifiers}" href="#" role="button">
+// 	Link
+//</a>
+//
+// Styleguide 4.2
+.btn--modal{
+	border-top-left-radius: 20% 45%;
+    border-top-right-radius: 20% 45%;
+	border-bottom-left-radius: 20% 45%;
+    border-bottom-right-radius: 20% 45%;
+	z-index: 1;
+	position: relative;
+	padding-left: 3%;
+	padding-right: 3%;
+}
