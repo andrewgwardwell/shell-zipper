@@ -2,7 +2,8 @@
   "name": "app",
   "version": "0.0.0",
   "dependencies": {
-    "angular-ui-bootstrap": "^2.2.0"
+    "angular-ui-bootstrap": "^2.2.0",
+    "angular-ui-select": "^0.19.6"
   },
   "scripts": {
     "test": "gulp test"
