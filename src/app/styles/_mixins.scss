@@ -1,0 +1,7 @@
+//global mixins
+@mixin uniform-br($arg1, $arg2){
+	border-top-left-radius: $arg1 $arg2;
+    border-top-right-radius: $arg1 $arg2;
+	border-bottom-left-radius: $arg1 $arg2;
+    border-bottom-right-radius: $arg1 $arg2;
+}

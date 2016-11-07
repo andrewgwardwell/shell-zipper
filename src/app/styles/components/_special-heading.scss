@@ -15,20 +15,131 @@
 @mixin special-heading($color){
 	position: relative;
 	text-align: center;
+	width: 100%;
 	span{
 		color: $color;
 		display: inline-block;
 		background: #fff;
 		z-index: 1;
+		padding-left: 1.5%;
+    	padding-right: 1.5%;
 	}
 	.strike-through{
 		border-bottom: 1px solid $color;
 		position: absolute;
 		width: 100%;
 		top: 10px;
+		z-index: -1;
 	}
 }
 
 .special-text-wrapper{
 	@include special-heading($grey__font);
+}
+
+// Special Checkbox
+//
+// A slider for on off switch.
+//
+//blue - blue theme
+//orange - orange theme
+//
+//
+// markup:
+// <div class="bool-slider {$modifiers} off">
+// 	<div class="inner">
+// 		<div class="bool-slider-value off-value bool-slider-inline">
+// 			<span class="text label">Off Value</span>
+// 		</div>
+// 		<div class="slider bool-slider-inline">
+// 			<div class="track btn btn--modal">
+// 				<div class="bubble"></div>
+// 			</div>
+// 		</div>
+// 		<div class="bool-slider-value on-value bool-slider-inline">
+// 			<span class="text label">On Value</span>
+// 		</div>
+// 	</div>
+// </div>
+//
+//
+// Styleguide 4.3
+
+@mixin widget_coloring($color){
+		.bubble{
+			background: $color;
+	    }
+	    .track{
+			background: lighten($color, 25%);
+	    }
+}
+
+.bool-slider{
+	height: 50px;
+    display: inline-block;
+    span{
+		color: $grey__font;
+    }
+    .inner{
+    	position: relative;
+    	margin: 0 auto;
+    }
+    .bool-slider-inline{
+    	display: inline-block;
+    	outline: none;
+    }
+    .bubble{
+    	position: absolute;
+    	height: 20px;
+    	width: 20px;
+    	border-radius: 50%;
+    	top: -5.5px;
+    }
+    .track{
+		position: relative;
+		margin: 22.5px 0;
+		height: 10px;
+		width: 50px;
+		padding: 0;
+		@include uniform-br(10%, 45%);
+    }
+    // on off settings for widget
+    &.off{
+    	.bubble{
+    		left: -2px;
+    		right: auto;
+    	}
+    }
+    &.on{
+    	.bubble{
+    		right: -2px;
+    		left: auto;
+    	}
+    }
+    &.blue{
+    	@include widget_coloring($midblue);
+    	&.off{
+			.off-value span{
+				color: $midblue;
+			}
+    	}
+    	&.on{
+    		.on-value span{
+				color: $midblue;
+			}
+    	}	
+	}
+   	&.orange{
+    	@include widget_coloring($orange);
+    	&.off{
+			.off-value span{
+				color: $orange;
+			}
+    	}
+    	&.on{
+    		.on-value span{
+				color: $orange;
+			}
+    	}	
+	}
 }

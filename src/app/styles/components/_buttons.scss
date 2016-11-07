@@ -39,10 +39,7 @@
 //
 // Styleguide 4.2
 .btn--modal{
-	border-top-left-radius: 20% 45%;
-    border-top-right-radius: 20% 45%;
-	border-bottom-left-radius: 20% 45%;
-    border-bottom-right-radius: 20% 45%;
+	@include uniform-br(20%, 45%);
 	z-index: 1;
 	position: relative;
 	padding-left: 3%;

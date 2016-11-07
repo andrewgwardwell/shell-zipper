@@ -1,14 +1,26 @@
-<div class="container">
-
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
-  </div>
-
-  <form action="" class="">
-
-      <form-el type="dropdown" options=''></form-el>
-
-      <form-el type="date" options=''></form-el>
-
-  </form>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<spec-checkbox theme="blue" default="off" labels="{on: 'On Value', off:'Off Value'}"></spec-checkbox>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="special-text-wrapper">
+				<div class="strike-through"></div>
+				 <div class="text">
+				  	<span>This is a special Heading</span> 
+				  </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Some form stuff</h1>
+		  	<form action="" class="">
+		      <form-el type="dropdown" options=''></form-el>
+		      <form-el type="date" options=''></form-el>
+		  	</form>
+		</div>
+	</div>
 </div>
