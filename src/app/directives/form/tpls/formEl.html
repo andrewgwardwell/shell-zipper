@@ -1,6 +1,5 @@
 <div class="form-group" >
-{{type}}
-<div class="wrapper dropdown" ng-show="type == 'dropdown'">
+<div class="wrapper dropdown" ng-if="type == 'dropdown'">
   <span>Selected: {name: {{selected.value.name}}, id: {{selected.value.id}} }</span>
   <ui-select ng-model="selected.value">
     <ui-select-match>
@@ -13,8 +12,20 @@
   </ui-select>
 </div>
 
+<div class="wrapper dropdown" ng-if="type == 'dropdown-simple'">
+  <ui-select ng-model="selected.value">
+    <ui-select-match>
+        <span ng-bind="selected.value.name"></span>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+    </ui-select-match>
+    <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+        <span ng-bind="item.name"></span>
+    </ui-select-choices>
+  </ui-select>
+</div>
 
-<div class="wrapper" ng-show="type == 'date'">
+
+<div class="wrapper" ng-if="type == 'date'">
 	    <div style="display:inline-block; min-height:290px;">
 	      <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
 	    </div>

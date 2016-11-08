@@ -1,14 +1,14 @@
 (function() {
 	'use strict';
 
-	var ctrl =
+	// var ctrl =
 
 		angular
 		.module('app')
 		.directive('formEl', function() {
-			var ctrl = ['$scope', '$window', function($scope, $window) {
+			var ctrl = ['$scope', function($scope) {
 				var init = function() {
-					if ($scope.type == 'dropdown') {
+					if ($scope.type == 'dropdown' || $scope.type == 'dropdown-simple') {
 						var opts = $scope.options;
 						opts = [{
 							id: 1,

@@ -143,3 +143,110 @@
     	}	
 	}
 }
+
+// Icon Inputs
+//
+// Inputs with icon.
+//
+//blue - blue theme
+//
+//
+// markup:
+// 	<label for="">Icon Input</label>
+// 	<div class="icon-combo">
+// 		<input type="text" class="form-control icon-input icon-input-arrow off" placeholder="beans">
+// 		</input>
+// 		<div class="icon-holder">
+//  <span class="glyphicon glyphicon-search"></span>	
+// 		</div>
+// 	</div>
+//
+//
+// Styleguide 4.7
+
+.icon-combo{
+	position: relative;
+}
+.icon-holder{
+	position: absolute;
+	top: 6px;
+    right: 5px;
+}
+
+// Input Combo #1
+//
+// Multiple cardinality inputs.
+//
+// markup:
+//<div class="special-multi-cardinality ng-isolate-scope" clabel="{right:'this', left:'that'}">
+// 	<div class="left-input col-md-4">
+// 		<label for="" class="ng-binding">that</label>
+// 		<!-- ngRepeat: (key, value) in fields --><div ng-repeat="(key, value) in fields" class="ng-scope">
+// 			<div class="form-group ng-isolate-scope" type="dropdown-simple" options="">
+// <!-- ngIf: type == 'dropdown' -->
+// <!-- ngIf: type == 'dropdown-simple' --><div class="wrapper dropdown ng-scope" ng-if="type == 'dropdown-simple'">
+//   <div class="ui-select-container ui-select-bootstrap dropdown ng-pristine ng-untouched ng-valid ng-scope ng-not-empty" ng-class="{open: $select.open}" ng-model="selected.value" aria-invalid="false"><div class="ui-select-match ng-scope" ng-hide="$select.open &amp;&amp; $select.searchEnabled" ng-disabled="$select.disabled" ng-class="{'btn-default-focus':$select.focus}" aria-hidden="false" aria-disabled="false"><span tabindex="-1" class="btn btn-default form-control ui-select-toggle" aria-label="Select box activate" ng-disabled="$select.disabled" ng-click="$select.activate()" style="outline: 0;" role="button" aria-disabled="false"><span ng-show="$select.isEmpty()" class="ui-select-placeholder text-muted ng-binding ng-hide" aria-hidden="true"></span> <span ng-hide="$select.isEmpty()" class="ui-select-match-text pull-left" ng-class="{'ui-select-allow-clear': $select.allowClear &amp;&amp; !$select.isEmpty()}" ng-transclude="" aria-hidden="false">
+//         <span ng-bind="selected.value.name" class="ng-binding ng-scope">ted</span>
+//         <span class="glyphicon glyphicon-chevron-down ng-scope"></span>
+//     </span> <i class="caret pull-right" ng-click="$select.toggle($event)" role="button" tabindex="0"></i> <a ng-show="$select.allowClear &amp;&amp; !$select.isEmpty() &amp;&amp; ($select.disabled !== true)" aria-label="Select box clear" style="margin-right: 10px" ng-click="$select.clear($event)" class="btn btn-xs btn-link pull-right ng-hide" aria-hidden="true"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></a></span></div><span ng-show="$select.open &amp;&amp; $select.refreshing &amp;&amp; $select.spinnerEnabled" class="ui-select-refreshing glyphicon-refresh ui-select-spin ng-hide" aria-hidden="true"></span> <input type="search" autocomplete="off" tabindex="-1" aria-expanded="true" aria-label="Select box" aria-owns="ui-select-choices-0" class="form-control ui-select-search ng-pristine ng-untouched ng-valid ng-empty ng-hide" ng-class="{ 'ui-select-search-hidden' : !$select.searchEnabled }" placeholder="" ng-model="$select.search" ng-show="$select.open" aria-hidden="true" aria-invalid="false"><ul class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-scope ng-hide" ng-show="$select.open &amp;&amp; $select.items.length > 0" repeat="item in (itemArray | filter: $select.search) track by item.id" aria-hidden="true"><li class="ui-select-choices-group" id="ui-select-choices-0"><div class="divider ng-hide" ng-show="$select.isGrouped &amp;&amp; $index > 0" aria-hidden="true"></div><div ng-show="$select.isGrouped" class="ui-select-choices-group-label dropdown-header ng-binding ng-hide" ng-bind="$group.name" aria-hidden="true"></div><!-- ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --></li></ul><div class="ui-select-no-choice"></div><ui-select-single></ui-select-single><input ng-disabled="$select.disabled" class="ui-select-focusser ui-select-offscreen ng-scope" type="text" id="focusser-0" aria-label="Select box focus" aria-haspopup="true" role="button"></div>
+// </div><!-- end ngIf: type == 'dropdown-simple' -->
+// <!-- ngIf: type == 'date' -->
+// </div>
+// 		</div><!-- end ngRepeat: (key, value) in fields --><div ng-repeat="(key, value) in fields" class="ng-scope">
+// 			<div class="form-group ng-isolate-scope" type="dropdown-simple" options="">
+// <!-- ngIf: type == 'dropdown' -->
+// <!-- ngIf: type == 'dropdown-simple' --><div class="wrapper dropdown ng-scope" ng-if="type == 'dropdown-simple'">
+//   <div class="ui-select-container ui-select-bootstrap dropdown ng-not-empty ng-valid" ng-class="{open: $select.open}" ng-model="selected.value" aria-invalid="false"><div class="ui-select-match" ng-hide="$select.open &amp;&amp; $select.searchEnabled" ng-disabled="$select.disabled" ng-class="{'btn-default-focus':$select.focus}" aria-hidden="false" aria-disabled="false"><span tabindex="-1" class="btn btn-default form-control ui-select-toggle" aria-label="Select box activate" ng-disabled="$select.disabled" ng-click="$select.activate()" style="outline: 0;" role="button" aria-disabled="false"><span ng-show="$select.isEmpty()" class="ui-select-placeholder text-muted ng-binding ng-hide" aria-hidden="true"></span> <span ng-hide="$select.isEmpty()" class="ui-select-match-text pull-left" ng-class="{'ui-select-allow-clear': $select.allowClear &amp;&amp; !$select.isEmpty()}" ng-transclude="" aria-hidden="false">
+//         <span ng-bind="selected.value.name" class="ng-binding ng-scope">ted</span>
+//         <span class="glyphicon glyphicon-chevron-down ng-scope"></span>
+//     </span> <i class="caret pull-right" ng-click="$select.toggle($event)" role="button" tabindex="0"></i> <a ng-show="$select.allowClear &amp;&amp; !$select.isEmpty() &amp;&amp; ($select.disabled !== true)" aria-label="Select box clear" style="margin-right: 10px" ng-click="$select.clear($event)" class="btn btn-xs btn-link pull-right ng-hide" aria-hidden="true"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></a></span></div><span ng-show="$select.open &amp;&amp; $select.refreshing &amp;&amp; $select.spinnerEnabled" class="ui-select-refreshing glyphicon-refresh ui-select-spin ng-hide" aria-hidden="true"></span> <input type="search" autocomplete="off" tabindex="-1" aria-expanded="true" aria-label="Select box" aria-owns="ui-select-choices-2" class="form-control ui-select-search ng-pristine ng-untouched ng-valid ng-empty ng-hide" ng-class="{ 'ui-select-search-hidden' : !$select.searchEnabled }" placeholder="" ng-model="$select.search" ng-show="$select.open" aria-hidden="true" aria-invalid="false"><ul class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-hide" ng-show="$select.open &amp;&amp; $select.items.length > 0" repeat="item in (itemArray | filter: $select.search) track by item.id" aria-hidden="true"><li class="ui-select-choices-group" id="ui-select-choices-2"><div class="divider ng-hide" ng-show="$select.isGrouped &amp;&amp; $index > 0" aria-hidden="true"></div><div ng-show="$select.isGrouped" class="ui-select-choices-group-label dropdown-header ng-binding ng-hide" ng-bind="$group.name" aria-hidden="true"></div><!-- ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --><!-- ngIf: $select.open --><!-- end ngRepeat: item in $select.items track by item.id --></li></ul><div class="ui-select-no-choice"></div><ui-select-single></ui-select-single><input ng-disabled="$select.disabled" class="ui-select-focusser ui-select-offscreen ng-scope" type="text" id="focusser-2" aria-label="Select box focus" aria-haspopup="true" role="button"></div>
+// </div><!-- end ngIf: type == 'dropdown-simple' -->
+// <!-- ngIf: type == 'date' -->
+// </div>
+// 		</div><!-- end ngRepeat: (key, value) in fields -->
+// 	</div>
+// 	<div class="right-input col-md-6">
+// 		<label for="" class="ng-binding">this</label>
+// 		<!-- ngRepeat: (key, value) in fields --><div ng-repeat="(key, value) in fields" class="form-group ng-scope">
+// 			<input type="text" class="form-control mc-field">
+// 		</div><!-- end ngRepeat: (key, value) in fields --><div ng-repeat="(key, value) in fields" class="form-group ng-scope">
+// 			<input type="text" class="form-control mc-field">
+// 		</div><!-- end ngRepeat: (key, value) in fields -->
+// 	</div>
+// 	<div class="appendix col-md-2">
+// 		<label for=""></label>
+// 		<!-- ngRepeat: (key, value) in fields --><div ng-repeat="(key, value) in fields" class="mc-icon ng-scope" ng-class="{'last': $last &amp;&amp; !$first}">
+// 			<span ng-show="!$last" class="glyphicon glyphicon-remove-sign" ng-click="removeField($index)" role="button" tabindex="0" aria-hidden="false" style=""></span>
+// 			<span ng-hide="!$last" class="glyphicon glyphicon-plus-sign ng-hide" ng-click="addField()" role="button" tabindex="0" aria-hidden="true" style=""></span>
+// 		</div><!-- end ngRepeat: (key, value) in fields --><div ng-repeat="(key, value) in fields" class="mc-icon ng-scope last" ng-class="{'last': $last &amp;&amp; !$first}" style="">
+// 			<span ng-show="!$last" class="glyphicon glyphicon-remove-sign ng-hide" ng-click="removeField($index)" role="button" tabindex="0" aria-hidden="true"></span>
+// 			<span ng-hide="!$last" class="glyphicon glyphicon-plus-sign" ng-click="addField()" role="button" tabindex="0" aria-hidden="false"></span>
+// 		</div><!-- end ngRepeat: (key, value) in fields -->
+// 	</div>
+// </div>
+//
+// Styleguide 4.8
+
+.special-multi-cardinality{
+	.form-group{
+		margin-bottom: 10px;
+	}
+	.left-input, .right-input, .appendix{
+		padding: 5px;
+	}
+	.mc-icon{
+		height: 34px;
+		margin-bottom: 10px;
+		width: 34px;
+		font-size: 24px;
+		.glyphicon{
+			top: 8px;
+		}
+		.glyphicon-remove-sign{
+			color: $red;
+		}
+		.glyphicon-plus-sign{
+			color: $midblue;
+		}
+	}
+}

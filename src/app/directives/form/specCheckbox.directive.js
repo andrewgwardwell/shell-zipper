@@ -2,9 +2,8 @@
 	'use strict';
 	angular.module('app')
 		.directive('specCheckbox', function() {
-			var ctrl = ['$scope', '$window', function($scope, $window) {
+			var ctrl = ['$scope', function($scope) {
 				var init = function() {
-					console.log($scope);
 					$scope.state = $scope.default;
 					$scope.innerState = $scope.state == 'off' ? false : true;
 				};
@@ -17,7 +16,6 @@
 					}
 				}
 				$scope.toggleEl = function(){
-					console.log('clicked');
 					$scope.innerState = !$scope.innerState;
 					$scope.toggleClass(); 
 				}

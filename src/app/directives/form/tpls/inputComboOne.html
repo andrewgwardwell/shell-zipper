@@ -1,0 +1,22 @@
+<div class="special-multi-cardinality">
+	<div class="left-input col-md-4">
+		<label for="">{{clabel.left}}</label>
+		<div ng-repeat="(key, value) in fields">
+			<form-el type="dropdown-simple" options=''></form-el>
+		</div>
+	</div>
+	<div class="right-input col-md-6">
+		<label for="">{{clabel.right}}</label>
+		<div ng-repeat="(key, value) in fields" class='form-group'>
+			<input type="text" class="form-control mc-field" />
+		</div>
+	</div>
+	<div class="appendix col-md-2">
+		<label for=""></label>
+		<div ng-repeat="(key, value) in fields" class='mc-icon' ng-class="{'last': $last && !$first}">
+			<span ng-show="!$last" class="glyphicon glyphicon-remove-sign" ng-click="removeField($index)"></span>
+			<span ng-hide="!$last" class="glyphicon glyphicon-plus-sign" ng-click="addField()"></span>
+		</div>
+	</div>
+</div>
+
