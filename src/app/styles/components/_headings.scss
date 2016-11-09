@@ -121,8 +121,20 @@ p, span, label, strong, em{
 // Styleguide 3.5
 .boxed-heading{
 	display: inline-block;
+	background: $midblue__menu-2;
 	.title-text{
-		padding: 10px;
+		padding: 0px 10px;
 		color: #fff;
+		@include font_mid;
 	}
+	.right{
+		background: $darkblue__menu-2;
+	}
+	.glyphicon{
+	    font-size: 29px;
+    	padding: 5px 10px;
+		color: #fff;
+		margin-top: 0;
+	}
+
 } 
