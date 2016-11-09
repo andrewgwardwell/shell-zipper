@@ -46,3 +46,196 @@
 	}
 }
 
+// Special Checkbox
+//
+// A slider for on off switch.
+//
+//blue - blue theme
+//orange - orange theme
+//
+//
+// markup:
+// <div class="bool-slider {$modifiers} off">
+// 	<div class="inner">
+// 		<div class="bool-slider-value off-value bool-slider-inline">
+// 			<span class="text label">Off Value</span>
+// 		</div>
+// 		<div class="slider bool-slider-inline">
+// 			<div class="track btn btn--modal">
+// 				<div class="bubble"></div>
+// 			</div>
+// 		</div>
+// 		<div class="bool-slider-value on-value bool-slider-inline">
+// 			<span class="text label">On Value</span>
+// 		</div>
+// 	</div>
+// </div>
+//
+//
+// Styleguide 5.2
+
+@mixin widget_coloring($color){
+		.bubble{
+			background: $color;
+	    }
+	    .track{
+			background: lighten($color, 25%);
+	    }
+}
+
+.bool-slider{
+	height: 50px;
+    display: inline-block;
+    span{
+		color: $grey__font;
+    }
+    .inner{
+    	position: relative;
+    	margin: 0 auto;
+    }
+    .bool-slider-inline{
+    	display: inline-block;
+    	outline: none;
+    }
+    .bubble{
+    	position: absolute;
+    	height: 20px;
+    	width: 20px;
+    	border-radius: 50%;
+    	top: -5.5px;
+    }
+    .track{
+		position: relative;
+		margin: 22.5px 0;
+		height: 10px;
+		width: 50px;
+		padding: 0;
+		@include uniform-br(10%, 45%);
+    }
+    // on off settings for widget
+    &.off{
+    	.bubble{
+    		left: -2px;
+    		right: auto;
+    	}
+    }
+    &.on{
+    	.bubble{
+    		right: -2px;
+    		left: auto;
+    	}
+    }
+    &.aqua{
+    	.bubble{
+    		background: $ow;
+    	}
+		.track{
+    		background: $offblue;
+    	}
+    	.on-value span{
+			display: none;
+		}
+    	&.off{
+			.off-value span{
+				display: inline-block;
+			}
+    	}
+    	&.on{
+    		.off-value span{
+				display: none;
+			}
+    		.track{
+    			background: $aquagreen;
+    		}
+    	}
+	}
+    &.blue{
+    	@include widget_coloring($midblue);
+    	&.off{
+			.off-value span{
+				color: $midblue;
+			}
+    	}
+    	&.on{
+    		.on-value span{
+				color: $midblue;
+			}
+    	}	
+	}
+   	&.orange{
+    	@include widget_coloring($orange);
+    	&.off{
+			.off-value span{
+				color: $orange;
+			}
+    	}
+    	&.on{
+    		.on-value span{
+				color: $orange;
+			}
+    	}	
+	}
+}
+
+// Icon Inputs
+//
+// Inputs with icon.
+//
+//blue - blue theme
+//
+//
+// markup:
+// 	<label for="">Icon Input</label>
+// 	<div class="icon-combo">
+// 		<input type="text" class="form-control icon-input icon-input-arrow off" placeholder="beans">
+// 		</input>
+// 		<div class="icon-holder">
+//  <span class="glyphicon glyphicon-search"></span>	
+// 		</div>
+// 	</div>
+//
+//
+// Styleguide 5.3
+
+.icon-combo{
+	position: relative;
+}
+.icon-holder{
+	position: absolute;
+	top: 6px;
+    right: 5px;
+}
+
+// Input Combo #1
+//
+// Multiple cardinality inputs.
+//
+// markup:
+//<input-combo-one clabel="{right:'this', left:'that'}"></input-combo-one>
+//
+// Styleguide 5.4
+
+.special-multi-cardinality{
+	.form-group{
+		margin-bottom: 10px;
+	}
+	.left-input, .right-input, .appendix{
+		padding: 5px;
+	}
+	.mc-icon{
+		height: 34px;
+		margin-bottom: 10px;
+		width: 34px;
+		font-size: 24px;
+		.glyphicon{
+			top: 8px;
+		}
+		.glyphicon-remove-sign{
+			color: $red;
+		}
+		.glyphicon-plus-sign{
+			color: $midblue;
+		}
+	}
+}
+

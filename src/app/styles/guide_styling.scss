@@ -3,10 +3,10 @@
 }
 
 [class$='--darkblue']{
-	background: $darkblue;
+	background: $darkblue__menu;
 }
 [class$='--midblue']{
-	background: $midblue;
+	background: $darkblue__menu;
 }
 [class$='--lightblue']{
 	background: $lightblue;
@@ -68,6 +68,9 @@
 }
 [class$='--ow--color'] > *{
 	color: $ow;
+}
+[class$='--white--color'] > *{
+	color: #fff;
 }
 
 .swatch{

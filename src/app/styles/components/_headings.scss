@@ -103,3 +103,26 @@ p, span, label, strong, em{
 		}
 	}
 }
+
+// Boxed title with icon
+//
+// Heading with icon.
+// 
+// markup:
+//  <div class="boxed-heading title">
+// 		<div class="left">
+//			<h4 class="title-text super-title">Welcome to the</h4>
+// 		</div>
+// 		<div class="right"> 		
+//     		<span class="glyphicon glyphicon-gear"></span>
+// 		</div>
+//  </div>
+//
+// Styleguide 3.5
+.boxed-heading{
+	display: inline-block;
+	.title-text{
+		padding: 10px;
+		color: #fff;
+	}
+} 

@@ -1,19 +1,13 @@
-//wrapping class for the benefit of the style
+	@import 'bootstrap.scss';
 
-// @import 'guide_styling.scss';
 	@import '_variables.scss';
-
-// Typography
-//
-// Styleguide 3
-	@import 'components/_headings';
-
-.sample-app{
+//wrapping class for the benefit of the style
 	@import '_grid.scss';
 	@import 'components.scss';
-}
+	@import 'guide_styling.scss';
 
-	@import 'bootstrap.scss';
+
+
 
 
 	
