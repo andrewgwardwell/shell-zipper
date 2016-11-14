@@ -24,7 +24,7 @@
 // Styleguide 6.1
 
 .menu-bar{
-	background: $midblue__menu;
+	background: $midblue__menu-2;
 	padding: 10px 0px 10px 20px;
 	overflow: hidden;
 	&.orange{
@@ -59,7 +59,7 @@
 			}
 		}
 		.glyphicon{
-			color: $darkblue__menu;
+			color: $darkblue;
 			margin-right: 10px;
 		}
 	}
@@ -97,7 +97,7 @@
 // Styleguide 6.2
 
 .menu-item{
-	background: $midblue__menu;
+	background: $midblue__menu-2;
 	margin: 0 10px;
 	display: inline-block;
 	font-weight: 100;
