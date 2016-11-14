@@ -5,15 +5,13 @@
 			var ctrl = ['$scope', function($scope) {
 				var init = function() {
 					console.log($scope);
-					$scope.fields = [
-						{}
-					];
+					$scope.fields = [{}];
 				};
 				init();
-				$scope.removeField = function(i){
+				$scope.removeField = function(i) {
 					$scope.fields.splice(i, 1);
 				};
-				$scope.addField = function(){
+				$scope.addField = function() {
 					$scope.fields.push({});
 				}
 			}];

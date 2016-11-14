@@ -5,3 +5,18 @@
 	border-bottom-left-radius: $arg1 $arg2;
     border-bottom-right-radius: $arg1 $arg2;
 }
+
+
+
+@mixin swatch-gradient($color){
+	$end_color: $color;
+	$start_color: lighten($end_color, 15%);
+	background: rgba($end_color, 1);
+	background: -moz-linear-gradient(left, rgba($start_color,1) 0%, rgba($end_color,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba($start_color,1)), color-stop(100%, rgba($end_color,1)));
+	background: -webkit-linear-gradient(left, rgba($start_color,1) 0%, rgba($end_color,1) 100%);
+	background: -o-linear-gradient(left, rgba($start_color,1) 0%, rgba($end_color,1) 100%);
+	background: -ms-linear-gradient(left, rgba($start_color,1) 0%, rgba($end_color,1) 100%);
+	background: linear-gradient(to right, rgba($start_color ,1) 0%, rgba($end_color,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start_color, endColorstr=$end_color, GradientType=1 );
+}

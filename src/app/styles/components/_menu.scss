@@ -3,6 +3,7 @@
 // Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
 //
 // default - float left
+// orange - orange theme
 //
 // markup:
 // <div class="menu-bar {$modifiers}">
@@ -26,6 +27,12 @@
 	background: $midblue__menu;
 	padding: 10px 0px 10px 20px;
 	overflow: hidden;
+	&.orange{
+		background: $orange2;
+		.menu-title .glyphicon{
+			color: $orange2--dark;
+		}
+	}
 	.title-wrapper,
 	.button-wrapper{
 		height: 30px;
@@ -97,7 +104,7 @@
 	&:hover{
 		background: $lightblue__menu;
 		color: $ow;
-		font-weight: 300;
+		// font-weight: 300;
 	}
 }
 .menu-item.active{
@@ -105,4 +112,15 @@
 	box-shadow: none;
 	color: $ow;
 	font-weight: 300;
+}
+.orange{
+	.menu-item{
+	background: $orange2;
+		&:hover{
+			background: $orange2--light;
+		}
+	}
+	.menu-item.active{
+		background: $orange2--light;
+	}
 }

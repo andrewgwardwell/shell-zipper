@@ -32,6 +32,9 @@
 }
 //UI overrides for bootstrap
 .dropdown{
+  .form-control{
+    width: 100% !important;
+  }
 	.ui-select-bootstrap .ui-select-toggle > .caret {
 		border: none;
 	}
@@ -41,9 +44,29 @@
 	}
 	.ui-select-bootstrap > .ui-select-choices,
 	.ui-select-bootstrap > .ui-select-no-choice{
-		width: 99%;
+		width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 		overflow: hidden;
 	}
+}
+.date--wrapper{
+  position: relative;
+  input{
+    border-right: none;
+  }
+  .input-group-btn button{
+    border-left: none;    
+  }
+  .uib-datepicker-popup{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+    outline: none;
+    table{
+      width: 100%;
+    }
+  }
 }
 
 // Special Checkbox
@@ -203,7 +226,11 @@
 .icon-holder{
 	position: absolute;
 	top: 6px;
-    right: 5px;
+  right: 15px;
+  .glyphicon{
+    top: 2px;
+    width: 20px;
+  }
 }
 
 // Input Combo #1
@@ -239,3 +266,45 @@
 	}
 }
 
+
+// Input Combo #1
+//
+// Multiple cardinality inputs.
+//
+// markup:
+//   <label class="box-label">
+//     <input type="checkbox" class="box-check"/>
+//     <span class="box-text">One</span>
+//   </label>
+//
+// Styleguide 5.
+
+// .box-label{
+//   display: inline-block;
+//   margin: 5px;
+// }
+// .box-text:before{
+//   content:"\f096";
+//   font-family: "FontAwesome";
+//   font-weight: normal;
+//   font-style: normal;
+//   font-variant: normal;
+//   text-transform: none;
+//   line-height: 1;
+//   margin-right: 5px;
+//   width: 1em;
+//   display: inline-block;
+// }
+// .box-check:checked + .box-text:before{
+//   content:"\f14a";
+//   color: #1e88e5;
+//   animation: checkanimate 200ms;
+// }
+// .box-label input[type="checkbox"]{
+//   display: none;
+// }
+// @keyframes checkanimate{
+//   0% {transform: scale(0);}
+//   90% {transform: scale(1.4);}
+//   100% {transform: scale(1);}
+// }

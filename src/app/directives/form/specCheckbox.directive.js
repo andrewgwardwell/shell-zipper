@@ -8,16 +8,16 @@
 					$scope.innerState = $scope.state == 'off' ? false : true;
 				};
 				init();
-				$scope.toggleClass = function(){
-					if($scope.innerState){
+				$scope.toggleClass = function() {
+					if ($scope.innerState) {
 						$scope.state = 'on';
 					} else {
 						$scope.state = 'off';
 					}
 				}
-				$scope.toggleEl = function(){
+				$scope.toggleEl = function() {
 					$scope.innerState = !$scope.innerState;
-					$scope.toggleClass(); 
+					$scope.toggleClass();
 				}
 			}];
 			return {

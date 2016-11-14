@@ -1,0 +1,58 @@
+// Key Element: Legend Swatch
+// 
+// Legend swatch.
+//
+// red - red
+// blue - blue
+//
+// markup:
+// <div class="legend-swatch {$modifiers}"></div>
+//
+// Styleguide 4.5
+
+.legend-swatch{
+	min-width: 75px;
+	height: 7.5px;
+	display: inline-block;
+	@include uniform-br(5px, 50%);
+	&.red{
+		@include swatch-gradient($red);
+	}
+	&.blue{
+		@include swatch-gradient($midblue__menu-2);
+	}
+}
+
+// Key Element: Block
+// 
+// Legend swatch.
+//
+// red - red
+// blue - blue
+//
+// markup:
+// <div class="row legend-row">
+//     <div class="label-combo">
+//         <input type="checkbox" />
+//         <label>Key Item 2</label>
+//     </div>
+//     <div class="legend-swatch {$modifiers}">
+//     </div>
+// </div>
+//
+// Styleguide 4.6
+
+.legend-row{
+	padding: 5px 0;
+	.label-combo{
+		label{
+			@include font_mid;
+		}
+		input{
+			margin: 0 10px 0 15px;
+		}
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+}

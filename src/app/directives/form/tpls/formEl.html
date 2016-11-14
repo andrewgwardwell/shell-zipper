@@ -1,18 +1,20 @@
 <div class="form-group" >
 <div class="wrapper dropdown" ng-if="type == 'dropdown'">
-  <span>Selected: {name: {{selected.value.name}}, id: {{selected.value.id}} }</span>
+  <span>{{label}}</span>
   <ui-select ng-model="selected.value">
     <ui-select-match>
         <span ng-bind="selected.value.name"></span>
-        <span class="glyphicon glyphicon-search"></span>
+        <span ng-if="options.icon == 'search'" class="glyphicon glyphicon-search"></span>
+        <span ng-if="options.icon == 'arrow'" class="glyphicon glyphicon-chevron-down"></span>
     </ui-select-match>
-    <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id" group-by="groupBy">
+    <ui-select-choices position="down" repeat="item in (itemArray | filter: $select.search) track by item.id" group-by="groupBy">
         <span ng-class="'hierarchy--' + item.level" ng-bind="item.name"></span>
     </ui-select-choices>
   </ui-select>
 </div>
 
 <div class="wrapper dropdown" ng-if="type == 'dropdown-simple'">
+  <span>{{label}}</span>
   <ui-select ng-model="selected.value">
     <ui-select-match>
         <span ng-bind="selected.value.name"></span>
@@ -25,9 +27,13 @@
 </div>
 
 
-<div class="wrapper" ng-if="type == 'date'">
-	    <div style="display:inline-block; min-height:290px;">
-	      <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
-	    </div>
+<div class="wrapper date--wrapper" ng-if="type == 'date'">
+      <span>{{label}}</span>
+      <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" popup-placement="bottom-left" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
 </div>
 </div>

@@ -45,6 +45,11 @@ $red: #DB544D;
 
 //Orange
 $orange: #ff8746;
+$orange2: #f67a15;
+$orange--light: lighten($orange, 10%);
+$orange2--light: lighten($orange2, 10%);
+$orange--dark: darken($orange, 10%);
+$orange2--dark: darken($orange2, 10%);
 
 //Purple
 $purple: #744C75;
