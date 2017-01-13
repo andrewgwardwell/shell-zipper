@@ -27,3 +27,11 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
+
+
+gulp.task('img', function() {
+  gulp.src(['img/**'])
+    // Do image sprites, optimizations etc.
+    .pipe(gulp.dest(buildPath + '/img'))
+    .pipe(gulp.dest(outputPath + '/img'));
+});
