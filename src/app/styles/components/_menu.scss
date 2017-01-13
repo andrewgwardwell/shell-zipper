@@ -124,3 +124,71 @@
 		background: $orange2--light;
 	}
 }
+
+
+
+// RoboScout Nav Bar
+//
+// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+//
+//
+// markup:
+// <header role="header" class="header-wrap--rs-drk-blue">
+//  <div class="logo">
+//		<h1><a href=""><img class="rs-logo" src="assets/img/logos/roboscout/roboscout-logos-two-tone-gray-white.svg" /></a></h1>
+//	</div>
+//  <nav class="primary-nav">
+//		<ul class="menu">
+//			<li class="item"><a href="">Dashboards</a></li>
+//			<li class="item has-children"><a href="">Stations</a>
+//				<ul class="sub-menu">
+//					<li class="item-child"><a href="">Test Link 1</a></li>
+//					<li class="item-child"><a href="">Test Link 2</a></li>
+//					<li class="item-child"><a href="">Test Link 3</a></li>
+//				</ul>
+//			</li>
+//			<li class="item"><a href="">Gamification</a></li>
+//			<li class="item"><a href="">WebScripts</a></li>
+//			<li class="item has-children"><a href="">Edit</a>
+//				<ul class="sub-menu">
+//					<li class="item-child"><a href="">Test Link 1</a></li>
+//					<li class="item-child"><a href="">Test Link 2</a></li>
+//					<li class="item-child"><a href="">Test Link 3</a></li>
+//				</ul>
+//			</li>
+//			<li class="item has-children"><a href="">Apps</a>
+//				<ul class="sub-menu">
+//					<li class="item-child"><a href="">Test Link 1</a></li>
+//					<li class="item-child"><a href="">Test Link 2</a></li>
+//					<li class="item-child"><a href="">Test Link 3</a></li>
+//				</ul>
+//			</li>
+//  </nav>
+//	<div class="search-bar">
+//   	<input type="text" class="search-field" name="searchterm" maxlength="30" placeholder="Search">
+//      <span class="icon-search"></span>
+//	</div>
+//  <nav class="toolbar-nav">
+//		<ul class="toolbar-menu">
+//			<li class="item alert-bubble"><span class="icon-alerts-bell"></span>
+//				<span class="alert-number">3</span>
+//			</li>
+//			<li class="item"><span class="icon-link"></span></li>
+//			<li class="item"><span class="icon-add-circle"></span></li>
+//			<li class="item"><span class="icon-shield"></span></li>
+//          <!-- FC Floor Selection -->
+//			<li class="item has-children"><a href=""><span class="fc-emblem">F</span> FCA1-A01</a>
+//			</li>
+//			<li class="item has-children"><a href="">Hi, Sunil</a>
+//				<ul class="user-sub-menu">
+//					<li class="item-child"><a href="">Test Link 1</a></li>			
+//					<li class="item-child"><a href="">Test Link 1</a></li>			
+//					<li class="item-child"><a href="">Test Link 1</a></li>			
+//				</ul>
+//			</li>
+//			<li class="item"><a href="">Help</a></li>				
+//		</ul>	
+//  </nav>
+// </header>
+//
+// Styleguide 6.3

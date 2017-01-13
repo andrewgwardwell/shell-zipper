@@ -1,58 +1,429 @@
-// Tab Items
+// RoboScout UI: Tabs
 //
-// Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
+// ##### **Tabs:** #####
+// Tabs are simple controllers for creating tabular based dynamically loaded content. Shown here are the active, hover, and default states available for tabs.   
 //
 // active - active state
 //
 // markup:
-// <ul class="nav nav-tabs">
-//   <li role="presentation" class="{$modifiers}"><a href="#">Normal Playback</a></li>
-//   <li role="presentation"><a href="#">Cummulative History</a></li>
-//   <li role="presentation"><a href="#">Logs</a></li>
+// <ul class="nav-tabs">
+//   <li role="presentation" class="{$modifiers}"><a href="">Pick</a></li>
+//   <li role="presentation"><a href="">Stow</a></li>
+//   <li role="presentation"><a href="">Count</a></li>
 // </ul>
-// <!-- This is the Angular Directive -->
-// <uib-tabset active="{$modifiers}">
-//    <uib-tab index="0" heading="Static title"></uib-tab>
-//    <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled">
-//      {{tab.content}}
-//    </uib-tab>
-//    <uib-tab index="3" select="alertMe()">
-//      <uib-tab-heading>
-//      </uib-tab-heading>
-//    </uib-tab>
-//  </uib-tabset>
 //
 // Styleguide 7.1
+ul.nav-tabs, .nav-tabs {
+	list-style: none;
+    list-style-type: none;
+    list-style-image: none;
+    padding-left: 0;
 
-@mixin tab_el(){
-	border-bottom: 2px solid $midblue;
-	a{
-		border: none;
-		color: $midblue;
-		background: none;
-		padding-bottom: 3px;		
-		&:hover{
-			border: none;
-			color: $midblue;
-			background: none;
-		}			
+    li {
+    	display: inline-block;
+    	
+ 		a {
+ 			text-decoration: none;
+ 			color: $rs-lgt-gray;
+ 			background: #f3f3f3;
+ 			border-top-left-radius: 4px;
+ 			border-top-right-radius: 4px;
+ 			border: 1px solid $border-gray;
+ 			border-bottom: none;
+ 			padding: 0.75em 1.1em;
+ 			transition: all 0.25s ease-in-out;
+ 			-webkit-transition: all 0.25s ease-in-out;
+
+
+ 			&:hover {
+ 				border-color: $rs-blue;
+ 				color: $rs-blue;
+ 				background-color: lighten($rs-blue, 45%);
+ 				transition: all 0.25s ease-in-out;
+ 			    -webkit-transition: all 0.25s ease-in-out;
+ 			}
+ 		}   	
+
+		&.active {
+ 				
+ 				a {
+ 					background: $rs-blue;
+ 					border-color: $rs-blue;
+ 					color: #fff;
+
+ 					&:hover {
+ 						color: #fff;
+ 						transition: all 0.25s ease-in-out;
+ 			            -webkit-transition: all 0.25s ease-in-out;
+ 					}
+ 				}
+ 			}
+	
+    }
+}
+
+// RoboScout UI: Metrics Nodes 
+//
+// ##### **Metrics Nodes:** #####
+// Common throughout RoboScouts dashboards, Metrics Nodes are a great example of reusable widgets within RoboScout. Each metric node widget includes styles for values, metric title, and optional iconography for
+// clickable interactivity. Adding a class of clickable to the metric node widget allows for additional hover and active states styles.  
+//
+// active - active state
+//  
+//
+// markup:
+// <ul class="metrics-wrap">
+//   <li role="presentation" class="metric-node clickable {$modifiers}">
+//		<span class="metric-value med">3</span>
+//		<span class="metric-title">Disabled Drives</span>
+//		<span class="icon-one-finger-click"></span>
+//	 </li>
+//   <li role="presentation" class="metric-node clickable">
+//		<span class="metric-value med">2</span>
+//		<span class="metric-title">Station Blocking Andons</span>
+//		<span class="icon-one-finger-click"></span>
+//	 </li>
+//   <li role="presentation" class="metric-node clickable">
+//		<span class="metric-value med">8</span>
+//		<span class="metric-title">Obstructions</span>
+//		<span class="icon-one-finger-click"></span>
+//	 </li>
+//   <li role="presentation" class="metric-node">
+//		<span class="metric-value">5</span>
+//		<span class="metric-title">Blocked Pods</span>
+//	 </li>
+// </ul>
+//
+// Styleguide 7.2
+.metrics-wrap {
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+    /* adjust width and max-width to match your needs */
+    width: 100%; 
+    max-width: 62%;
+
+
+
+   	.metric-node {
+   		background: #fff;
+   		border-radius: 4px;
+   		-webkit-border-radius: 4px;
+   		-moz-border-radius: 4px;
+   		border: 1px solid $border-gray;
+   		padding: 0.5em 1em 0.6em 1em;
+   		display: -webkit-flex;
+	    display: flex;
+	 	   -webkit-align-items: center;
+	    align-items: center;
+	 	   -webkit-flex-direction: row;
+	    flex-direction: row;
+        -webkit-align-content: center;
+	    align-content: center;
+	    text-align: center;
+	    margin: 0 auto;
+	    transition: all 0.25s ease-in-out;
+ 			-webkit-transition: all 0.25s ease-in-out;
+ 		/* adjust max-width and min-height to match your needs */
+ 		max-width: 230px;
+ 		min-height: 50px;
+
+
+   			span {
+   				display: block;
+   				line-height: 1;
+   				transition: all 0.25s ease-in-out;
+ 			        -webkit-transition: all 0.25s ease-in-out;
+
+   				&.metric-value {
+   					font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+   					font-weight: 700;
+   					font-size: 1.75em;
+   				}
+
+   				&.metric-title {
+   					font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+   					font-size: 1em;
+   					padding: 0 1em;
+   					text-align: left;
+   				}
+
+   				&.icon-one-finger-click {
+   					font-size: 1.25em;
+   				}
+   			}
+
+	   	&.clickable {
+	   		cursor: pointer;
+		
+			&:hover {
+	   			border-color: $rs-blue;
+
+
+	   			span {
+	   				&.metric-title, &.icon-one-finger-click {
+	   					color: $rs-blue;
+	   				}
+	   			}
+	   		}
+		
+
+	   		&.active {
+	   			background: $rs-blue;
+	   			border-color: $rs-blue;
+
+	   			&:hover {
+
+	   				span {
+	   					color: #fff;
+	   				}
+	   			}
+
+	   			span {
+	   				color: #fff;
+	   			}
+	   		}
+	   	}
+   	}
+
+
+}
+
+
+.bad {
+	color: $rs-red;
+}
+
+.med {
+	color: $rs-yellow;
+}
+
+.good {
+	color: $rs-green;
+}
+
+
+// RoboScout UI: Banner Notifications
+//
+// ##### **Banner Notifications:** #####
+//
+// markup:
+// <div class="banner-notification --rs-orange">
+//     <span class="icon-alert-icon"></span>
+//	   <p class="banner-content">Floor Health: 86% / 92% on B01 for the last 12 minutes</p>
+//	   <a href="" class="btn btn-rc-outline">Dismiss</a>
+//	   <a href="" class="btn btn-rc">View Alerts (3)</a>
+// </div>
+//
+// Styleguide 7.3
+.banner-notification {
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    width: 100%;
+    padding: 0 2%;
+
+
+    	span.icon-alert-icon {
+    		color: #fff;
+    		margin-right: 1em;
+    		font-size: 1.5em;
+    	}
+
+    	.banner-content, p {
+    		color: #fff;
+    		width: 79%;
+    		text-align: left;
+    	}
+
+
+    	.btn {
+    		margin: 0 auto;
+    	}
+
+    	.btn-rc {
+    		background-color: #fff;
+    		color: $rs-orange; /* edit this color to the color of the banner background */
+    	}
+
+}
+
+// RoboScout UI: Tables
+//
+//
+//
+// markup:
+// <table>
+//   <colgroup span="2"></colgroup>
+//   <colgroup span="2"></colgroup>
+//   <tr>
+//     <td rowspan="2"></td>
+//     <th colspan="2" scope="colgroup" class="drk">Pick</th>
+//     <th colspan="2" scope="colgroup" class="drk">Stow</th>
+//   </tr>
+//   <tr>
+//     <th scope="col">Pod Gap %</th>
+//     <th scope="col">Transition %</th>
+//     <th scope="col">Pod Gap %</th>
+//     <th scope="col">Transition %</th>
+//   </tr>
+//   <tr>
+//     <th scope="row">A01</th>
+//     <td>4.1%</td>
+//     <td>2.2%</td>
+//     <td>5.0%</td>
+//     <td>3.3%</td>
+//   </tr>
+//   <tr class="even">
+//     <th scope="row">A02</th>
+//     <td>4.1%</td>
+//     <td>2.2%</td>
+//     <td>5.0%</td>
+//     <td>3.3%</td>
+//   </tr>
+//   <tr>
+//     <th scope="row">A03</th>
+//     <td>4.1%</td>
+//     <td>2.2%</td>
+//     <td>5.0%</td>
+//     <td>3.3%</td>
+//   </tr>
+// </table>
+//
+// Styleguide 7.4
+table {
+	border: 1px solid $border-gray;
+	color: $rs-med-gray;
+	font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+
+	tr, td, th {
+		border: 1px solid $border-gray;
+		padding: 0.4em;
+	}
+
+	th.drk {
+		background-color: #f3f3f3;
+		border-color: #d9dbdf;
+	}
+
+	th {
+		background-color: #f9f9f9;
+		padding: 0.5em 0.2em;
+		font-weight: 500;
+	}
+
+	tr.even {
+		td {
+			background-color: #f9fbfe;
+		}
 	}
 }
 
-.nav-tabs{
-	li,.nav-item{
-		margin-bottom: -2px;
-		a{
-			color: $grey__font;	
-			padding-bottom: 5px;
-			font-size: 16px;
-			@include font_mid;		
-		}
-		&.active{
-			@include tab_el;
-		}
-		&:hover{
-			@include tab_el;
-		}
-	}
+// RoboScout UI: Modals
+//
+// ##### **Modals:** #####
+//
+// markup:
+//  <section class="modal-overlay-bg">
+//  	<section class="modal-window-wrap">
+//			<div class="modal-header">
+//				<h4 class="modal-title">Disabled Drives</h4>
+//				<span class="icon-cross"></span>
+//			</div>
+//			<div class="modal-content-wrap">
+//				<p>There are 0 disabled drives at this time</p>
+//			</div>
+//		</section>
+//  </section>
+//
+// Styleguide 7.5
+.modal-overlay-bg {
+	z-index: 100; /* edit this value if there are addtional z-index layering needs */
+	position: relative; /* use position fixed or absolute for production needs */
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	min-height: 5	00px; /* edit this value to the needs of your viewport */
+	background: rgba(40,56,79,0.7);
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row;
+    flex-flow: row;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+    
+
+
+    .modal-window-wrap {
+    	max-width: 70%;
+    	width: 100%;
+    	margin: 10% auto;
+    	background: #fff;
+    	border-radius: 2px 2px 4px 4px;
+    	-moz-border-radius: 2px 2px 4px 4px;
+    	-webkit-border-radius: 2px 2px 4px 4px;
+	    
+    }
+
+    .modal-header {
+    	background: $rs-drk-blue;
+    	display: -webkit-flex;
+	    display: flex;
+	  		-webkit-align-items: center;
+	    align-items: center;
+	  		-webkit-flex-flow: row;
+	    flex-flow: row;
+	  		-webkit-align-content: space-between;
+	    align-content: space-between;
+	    width: 100%;
+	    margin: 0 auto;
+	    color: #fff;
+	    padding: 0 2%;
+
+
+	    .modal-title {
+	    	color: #fff;
+	    	font-weight: 500;
+	    	width: 97%;
+	    }
+
+	    span.icon-cross {
+	    	color: #fff;
+	    	font-size: 1.5em;
+	    	cursor: pointer;
+	    }
+    }
+
+    .modal-content-wrap {
+    	border: 1px solid $border-gray;
+    	border-top: none;
+    	border-radius: 2px 2px 4px 4px;
+    	-moz-border-radius: 2px 2px 4px 4px;
+    	-webkit-border-radius: 2px 2px 4px 4px;
+	    padding: 2em 2%;
+
+    }
 }
+
+
+
+
+

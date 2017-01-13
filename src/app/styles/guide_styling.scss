@@ -73,12 +73,80 @@
 	color: #fff;
 }
 
+[class$='--ar-orange']{
+	background:  $ar-orange;
+}
+
+[class$='--ar-teal']{
+	background:  $ar-teal;
+}
+
+[class$='--ar-drk-blue']{
+	background:  $ar-drk-blue;
+}
+
+[class$='--ar-purple']{
+	background:  $ar-purple;
+}
+
+[class$='--ar-lgt-grey']{
+	background:  $ar-lgt-grey;
+}
+
+
+/* -------------------------------------
+    RoboScout Colors
+------------------------------------- */
+
+
+[class$='--rs-orange']{
+	background:  $rs-orange;
+}
+
+[class$='--rs-drk-blue']{
+	background:  $rs-drk-blue;
+}
+
+[class$='--rs-med-gray']{
+	background:  $rs-med-gray;
+}
+
+[class$='--rs-blue']{
+	background:  $rs-blue;
+}
+
+[class$='--rs-lgt-gray']{
+	background:  $rs-lgt-gray;
+}
+
+
+[class$='--rs-red']{
+	background:  $rs-red;
+}
+
+[class$='--rs-yellow']{
+	background:  $rs-yellow;
+}
+
+[class$='--rs-green']{
+	background:  $rs-green;
+}
+
+
+[class$='--bg-gray']{
+	background:  $bg-gray;
+}
+
+
+
 .swatch{
-	width: 50px;
-	height: 50px;
-	margin: 10px;
+	width: 100%;
+	height: 100px;
+	margin: 0;
 	float: left;
-	border: 1px solid black;
+	text-align: center;
+	color: #fff;
+	line-height: 100px;
 }
 
 .text-box{
@@ -92,7 +160,7 @@
 }
 
 p, h1, h2, h3, h4, h5, span, strong, em, a, div, label{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', Helvetica Nueue, Arial, sans-serif;
 }
 
 .sample-container{
@@ -104,5 +172,867 @@ p, h1, h2, h3, h4, h5, span, strong, em, a, div, label{
 	}
 	[class^="col"]{
 		border: .5px dotted black;
+	}
+}
+
+
+p.lgt-bg {
+	background: #aaa;
+	padding: 1em 0;
+}
+
+.ar-logo-full {
+	max-width: 300px;
+	width: 100%;
+}
+
+/* -------------------------------------
+    Layout & Structure
+------------------------------------- */
+
+
+.container {
+	
+	width: 100%;
+	 display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+
+	background: gray;
+	list-style: none;
+	list-style-type: none;
+	list-style-image: none;
+	padding-left: 0;
+	padding: 2em;
+
+
+	.child {
+		width: 30%;
+		background: $ar-orange;
+		text-align: center;
+		color: #fff;
+		height: 150px;
+		margin: 0 auto;
+    	margin-top: 10px;
+		line-height: 150px;
+		font-weight: bold;
+		font-size: 3em;
+		text-align: center;
+
+	}
+}
+
+/* -------------------------------------
+    Atomic Components
+------------------------------------- */
+
+a.btn {
+	text-decoration: none;
+	padding: 0.5em 1em;
+	padding-bottom: 0.6em;
+
+
+}
+
+.btn-rc {
+		border-radius: 4px;
+	}
+
+.btn-outline {
+	 border: 1px solid $ar-drk-blue;
+	 background: #fff;
+	 color: $ar-drk-blue;
+
+	 &:hover {
+	 	background-color: $ar-drk-blue;
+	 	color: #fff;
+	}
+}
+
+.btn-rc-outline {
+	 border: 1px solid #fff;
+	 color: #fff;
+	 border-radius: 4px;
+	 -webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+}
+
+
+
+/* -------------------------------------
+    Logos 
+------------------------------------- */
+
+
+.rs-logo {
+	padding: 1em;
+	max-width: 250px;
+	width: 100%;
+}
+
+
+
+/* -------------------------------------
+    RoboScout Header Bar 
+------------------------------------- */
+
+
+header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: left;
+    justify-content: left;
+    width: 100%;
+    -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row ;
+   flex-flow: row;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: space-between;
+   align-content: space-between;
+   width: 100%;
+   height: 90px;
+   padding: 0 1%;
+   overflow-x: scroll;
+   overflow-y: hidden;
+
+
+   .logo, .rs-logo {
+   		padding: 0;
+   		flex: none;
+   		-webkit-flex: none;
+   }
+
+
+   .rs-logo {
+   	max-width: 220px;
+   }
+}
+
+
+nav.primary-nav,
+nav.toolbar-nav {
+	flex: none;
+	-webkit-flex: none;
+}
+
+ul.menu, 
+ul.sub-menu, 
+ul.icon-menu, 
+ul.user-menu, 
+ul.toolbar-menu,
+ul.metrics-wrap  {
+    list-style: none;
+    list-style-type: none;
+    list-style-image: none;
+    padding-left: 0;
+    flex:none;
+       -webkit-flex:none;
+ }
+
+
+ul.sub-menu,
+ul.user-sub-menu {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	-webkit-transition: opacity 0.3s ease-in-out;
+}
+
+ul.menu,
+ul.user-menu, 
+ul.toolbar-menu {
+
+    li {
+    	display: inline-block;
+
+    	 	&.has-children {
+    	 		padding-right: 1em;
+
+	    		&:after {
+	    			    content: "\e90d";
+						position: relative;
+						font-family: "roboscout-icons";
+						color: lighten($rs-drk-blue, 20%);;
+						font-size: 0.7em;
+						line-height: 1;
+						margin: 0;
+						padding: 0;
+						margin-top: -4.4em;
+						float: right;
+						left: 0.75em;
+	    		}
+
+	    	}
+
+    	&:hover {
+
+    		ul.sub-menu {
+    				display: block;
+    				background: $rs-drk-blue;
+				    position: absolute;
+				    padding-left: 0;
+				    min-width: 250px;
+				    opacity: 1;
+				    box-shadow: 0px -5px 0px 0px lighten($rs-drk-blue, 15%);
+				    transition: opacity 0.3s ease-in-out;
+    			    -webkit-transition: opacity 0.3s ease-in-out;
+
+
+				    li {
+				    	display: block;
+				    	width: 100%;
+
+				    	a {
+				    		line-height: 2.5;
+				    		-webkit-transition: background 0.1s ease-in-out;
+				    		transition: background 0.1s ease-in-out;
+				    		cursor: pointer;
+				    	
+				    		&:hover {
+				    			box-shadow: none;
+					    		display: block;
+					    		width: 100%;
+					    		background: lighten($rs-drk-blue, 5%);
+
+				    		}
+				    	}
+				    }
+    			}
+    	}
+
+    	a {
+    		text-decoration: none;
+    		color: #fff;
+    		font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+    		font-weight: 300;
+    		line-height: 90px;
+    		display: block;
+    		padding: 0 0.75em;
+    		box-shadow: inset 0px 0px 0px 0px lighten($rs-drk-blue, 15%);
+    		transition: box-shadow 0.25s ease-in-out;
+    		-webkit-transition: box-shadow 0.25s ease-in-out;
+    		cursor: pointer;
+
+
+    		&:hover {
+    			box-shadow: inset 0px -5px 0px 0px lighten($rs-drk-blue, 15%);
+    		}
+    	}
+ 		ul.sub-menu {
+    			display: none;
+    			opacity: 0;
+    			transition: opacity 0.3s ease-in-out;
+    			-webkit-transition: opacity 0.3s ease-in-out;
+    		}
+    }
+}
+
+
+
+.search-bar {
+	display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: left;
+    justify-content: left;
+    -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   min-width: 230px;
+
+	input.search-field[type="text"], .search-field {
+	    background: transparent;
+	    color: #fff;
+	    border: 1px solid #fff;
+	    border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    margin-bottom: 0;
+	    padding: 0.5em 0;
+	    text-indent: 0.75em;
+	    max-width: 220px;
+	    width: 100%;
+	    font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+	    font-weight: 300;
+	    font-size: 1em;
+
+	    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: #fff;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: #fff;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: #fff;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: #fff;
+		}
+	 }
+
+	 span.icon-search {
+	 	color: #fff;
+	 	font-size: 1.4em;
+	 	cursor: pointer;
+	 	position: relative;
+	 	margin-left: -1.5em;
+	 }
+
+}
+
+ ul.toolbar-menu {
+ 	li {
+ 		display: inline-block;
+ 		padding: 0.2em;
+
+
+ 		&.alert-bubble {
+ 			position: relative;
+ 			top: -0.6em;
+ 		}
+
+ 		span {
+ 			color: #fff;
+ 			font-size: 1.3em;
+ 			cursor: pointer;
+
+ 			&.fc-emblem {
+ 				    font-size: 0.8em;
+				    font-weight: 700;
+				    background: #8097b8;
+				    padding: 0.4em 0.75em;
+				    border-radius: 50%;
+				    text-align: center;
+				    height: 30px;
+				    width: 30px;
+				    display: inline;
+				    line-height: 1;
+				    position: relative;
+				    margin-right: .3em;
+ 			}
+
+	 		&.alert-number {
+				display: block;
+			    background: #ff9e2a;
+			    font-size: 0.75em;
+			    padding: 0.4em 0.2em 0.1em 0.1em;
+			    border-radius: 50%;
+			    text-align: center;
+			    min-height: 20px;
+			    min-width: 20px;
+			    position: relative;
+			    margin-top: -2.5em;
+			    margin-left: 0.5em;
+			    font-weight: 700;
+	 		}
+	 	}
+ 	}
+ }
+
+
+
+/* -------------------------------------
+    RoboScout UI Elements: Tabs
+------------------------------------- */
+
+ul.nav-tabs, .nav-tabs {
+	list-style: none;
+    list-style-type: none;
+    list-style-image: none;
+    padding-left: 0;
+
+    li {
+    	display: inline-block;
+    	
+ 		a {
+ 			text-decoration: none;
+ 			color: $rs-lgt-gray;
+ 			background: #f3f3f3;
+ 			border-top-left-radius: 4px;
+ 			border-top-right-radius: 4px;
+ 			border: 1px solid $border-gray;
+ 			border-bottom: none;
+ 			padding: 0.75em 1.1em;
+ 			transition: all 0.25s ease-in-out;
+ 			-webkit-transition: all 0.25s ease-in-out;
+
+
+ 			&:hover {
+ 				border-color: $rs-blue;
+ 				color: $rs-blue;
+ 				background-color: lighten($rs-blue, 45%);
+ 				transition: all 0.25s ease-in-out;
+ 			    -webkit-transition: all 0.25s ease-in-out;
+ 			}
+ 		}   	
+
+		&.active {
+ 				
+ 				a {
+ 					background: $rs-blue;
+ 					border-color: $rs-blue;
+ 					color: #fff;
+
+ 					&:hover {
+ 						color: #fff;
+ 						transition: all 0.25s ease-in-out;
+ 			            -webkit-transition: all 0.25s ease-in-out;
+ 					}
+ 				}
+ 			}
+	
+    }
+}
+
+
+
+/* -------------------------------------
+    RoboScout UI Elements: Metric Nodes
+------------------------------------- */
+
+
+.metrics-wrap {
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+    /* adjust width and max-width to match your needs */
+    width: 100%; 
+    max-width: 62%;
+
+
+
+   	.metric-node {
+   		background: #fff;
+   		border-radius: 4px;
+   		-webkit-border-radius: 4px;
+   		-moz-border-radius: 4px;
+   		border: 1px solid $border-gray;
+   		padding: 0.5em 1em 0.6em 1em;
+   		display: -webkit-flex;
+	    display: flex;
+	 	   -webkit-align-items: center;
+	    align-items: center;
+	 	   -webkit-flex-direction: row;
+	    flex-direction: row;
+        -webkit-align-content: center;
+	    align-content: center;
+	    text-align: center;
+	    margin: 0 auto;
+	    transition: all 0.25s ease-in-out;
+ 			-webkit-transition: all 0.25s ease-in-out;
+ 		/* adjust max-width and min-height to match your needs */
+ 		max-width: 230px;
+ 		min-height: 50px;
+
+
+   			span {
+   				display: block;
+   				line-height: 1;
+   				transition: all 0.25s ease-in-out;
+ 			        -webkit-transition: all 0.25s ease-in-out;
+
+   				&.metric-value {
+   					font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+   					font-weight: 700;
+   					font-size: 1.75em;
+   				}
+
+   				&.metric-title {
+   					font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+   					font-size: 1em;
+   					padding: 0 1em;
+   					text-align: left;
+   				}
+
+   				&.icon-one-finger-click {
+   					font-size: 1.25em;
+   				}
+   			}
+
+	   	&.clickable {
+	   		cursor: pointer;
+		
+			&:hover {
+	   			border-color: $rs-blue;
+
+
+	   			span {
+	   				&.metric-title, &.icon-one-finger-click {
+	   					color: $rs-blue;
+	   				}
+	   			}
+	   		}
+		
+
+	   		&.active {
+	   			background: $rs-blue;
+	   			border-color: $rs-blue;
+
+	   			&:hover {
+
+	   				span {
+	   					color: #fff;
+	   				}
+	   			}
+
+	   			span {
+	   				color: #fff;
+	   			}
+	   		}
+	   	}
+   	}
+
+
+}
+
+
+.bad {
+	color: $rs-red;
+}
+
+.med {
+	color: $rs-yellow;
+}
+
+.good {
+	color: $rs-green;
+}
+
+
+/* ------------------------------------------------
+    RoboScout UI Elements: Notification Banner
+------------------------------------------------ */
+
+.banner-notification {
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    width: 100%;
+    padding: 0 2%;
+
+
+    	span.icon-alert-icon {
+    		color: #fff;
+    		margin-right: 1em;
+    		font-size: 1.5em;
+    	}
+
+    	.banner-content, p {
+    		color: #fff;
+    		width: 79%;
+    		text-align: left;
+    	}
+
+
+    	.btn {
+    		margin: 0 auto;
+    	}
+
+    	.btn-rc {
+    		background-color: #fff;
+    		color: $rs-orange; /* edit this color to the color of the banner background */
+    	}
+
+}
+
+/* ------------------------------------------------
+    RoboScout UI Elements: Tables
+------------------------------------------------ */
+
+table {
+	border: 1px solid $border-gray;
+	color: $rs-med-gray;
+	font-family: "Open Sans", Helvetica Nueue, Arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+
+	tr, td, th {
+		border: 1px solid $border-gray;
+		padding: 0.4em;
+	}
+
+	th.drk {
+		background-color: #f3f3f3;
+		border-color: #d9dbdf;
+	}
+
+	th {
+		background-color: #f9f9f9;
+		padding: 0.5em 0.2em;
+		font-weight: 500;
+	}
+
+	tr.even {
+		td {
+			background-color: #f9fbfe;
+		}
+	}
+}
+
+
+/* ------------------------------------------------
+    RoboScout UI Elements: Blocks
+------------------------------------------------ */
+
+.block-wrap {
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    width: 100%;
+    padding: 0 1%;
+    border: 1px solid $border-gray;
+
+    &.grey-bg {
+    	background: #fbfbfb;
+    }
+}
+
+/* ------------------------------------------------
+    RoboScout UI Elements: Modals
+------------------------------------------------ */
+
+.modal-overlay-bg {
+	z-index: 100; /* edit this value if there are addtional z-index layering needs */
+	position: relative; /* use position fixed or absolute for production needs */
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	min-height: 5	00px; /* edit this value to the needs of your viewport */
+	background: rgba(40,56,79,0.7);
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row;
+    flex-flow: row;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+    
+
+
+    .modal-window-wrap {
+    	max-width: 70%;
+    	width: 100%;
+    	margin: 10% auto;
+    	background: #fff;
+    	border-radius: 2px 2px 4px 4px;
+    	-moz-border-radius: 2px 2px 4px 4px;
+    	-webkit-border-radius: 2px 2px 4px 4px;
+	    box-shadow: 0 0 2em 0.5em rgba(0,0,0,0.1);
+	    -moz-box-shadow: 0 0 2em 0.5em rgba(0,0,0,0.1);
+    }
+
+    .modal-header {
+    	background: $rs-drk-blue;
+    	display: -webkit-flex;
+	    display: flex;
+	  		-webkit-align-items: center;
+	    align-items: center;
+	  		-webkit-flex-flow: row;
+	    flex-flow: row;
+	  		-webkit-align-content: space-between;
+	    align-content: space-between;
+	    width: 100%;
+	    margin: 0 auto;
+	    color: #fff;
+	    padding: 0 2%;
+
+
+	    .modal-title {
+	    	color: #fff;
+	    	font-weight: 500;
+	    	width: 97%;
+	    }
+
+	    span.icon-cross {
+	    	color: #fff;
+	    	font-size: 1.5em;
+	    	cursor: pointer;
+	    }
+    }
+
+    .modal-content-wrap {
+    	border: 1px solid $border-gray;
+    	border-top: none;
+    	border-radius: 2px 2px 4px 4px;
+    	-moz-border-radius: 2px 2px 4px 4px;
+    	-webkit-border-radius: 2px 2px 4px 4px;
+	    padding: 2em 2%;
+
+    }
+}
+
+
+
+/* ------------------------------------------------
+    RoboScout UI Elements: Inputs
+------------------------------------------------ */
+
+
+form {
+	max-width: 300px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"], 
+input[type="phone"],
+input[type="text"], 
+textarea, select {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 100%;
+	border: 1px solid $border-gray;
+	padding: 0.6em 0;
+	text-indent: 0.5em;
+	outline: none;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin-bottom: 1em;
+	transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    background: #fff;
+    font-size: 1em;
+    color: $rs-med-gray;
+
+
+	&:focus {
+		   border-color: #20a9e4;
+		     transition: all .5s ease-in-out;
+		    -webkit-transition: all .5s ease-in-out;
+	}
+}
+
+
+.select-wrap {
+	display: -webkit-flex;
+    display: flex;
+  		-webkit-align-items: center;
+    align-items: center;
+  		-webkit-flex-flow: row;
+    flex-flow: row;
+  		-webkit-align-content: space-between;
+    align-content: space-between;
+
+
+    span.icon-down-arrow {
+    	position: relative;
+    	margin-left: -1.75em;
+    	top: -0.5em;
+    	color: $rs-lgt-gray;
+    	font-size: 1em;	
+    }
+}
+
+
+input[type="radio"], input[type="checkbox"] {
+	appearance: none;
+    -webkit-appearance: none;
+	margin: 8px 10px 0 0 !important;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    cursor: pointer;	
+}
+
+
+input[type="radio"] {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	position: relative;
+	top: .25em;
+
+
+	&:checked {
+		color: $rs-blue;
+		background-color: $rs-blue;
+		box-shadow: inset 0 0 0 5px #fff;
+		border-color: $rs-blue;
+	}
+}
+
+input[type="checkbox"] {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    vertical-align: bottom;
+
+
+
+    &:before {
+		content: "\e934";
+		font-family: 'roboscout-icons' !important;
+		color: #fff;
+		font-size: 0.8em;
+		display: inline-block;
+		text-align: center;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+    }
+
+	&:checked {
+		  border-color: $rs-blue;
+		  background-color: $rs-blue;
+		  color: #fff;
+		  font-size: 1em;
+		  display:inline-block;
+		  text-align: center;
 	}
 }

@@ -2,13 +2,13 @@
 //
 // Based on the bootstrap button this has been altered slightly to give us a good base toward our custom styles.
 //
-// btn-xs - small button
-// btn-sm - small button
-// btn-lrg - large button
-// pale - pale button
+// btn - Default button
+// btn-rc - Button with rounded corners
+// btn-outline - button with colored border
+// btn-rc-outline - button with rounded cornered and colored border
 //
 // markup:
-//<a class="btn primary {$modifiers}" href="#" role="button">Link</a>
+//<a class="btn primary {$modifiers}" href="#" role="Click Me!">Link</a>
 //
 // Styleguide 4.1
 .btn{

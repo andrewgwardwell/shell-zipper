@@ -1,44 +1,93 @@
-// Grid System
-//
-// Based on the bootstrap grid this has been altered slightly to give us a good base toward our custom styles.
-//
-// default - bootstrap
-// container--full - a container that spans the entire 100%
-// 
-// markup:
-// <div class="container-fluid sample-container {$modifiers}">
-//   <div class="row">
-// 		A row
-//   </div>
-//   <div class="row">
-// 		<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-// 		<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-//		<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
-//   </div>
-//   <div class="row">
-// 		<div class="col-xs-12 col-md-6">.col-xs-12 .col-md-6
-//			<div class="row">
-//				<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
-//				<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
-//				<div class="col-xs-12 col-md-4">.col-xs-12 .col-md-4</div>
-//			</div>
-//      </div>
-// 		<div class="col-xs-6 col-md-3 col-xs-offset-6 col-md-offset-3">
-//			.col-xs-6 .col-md-3 .col-md-offset-3
-//			<div class="row">
-//				<div class="col-xs-12 col-md-12">.col-xs-12 .col-md-12</div>
-//				<div class="col-xs-12 col-md-12">.col-xs-12 .col-md-12</div>
-//          </div>
-//      </div>
-//   </div>
-//   <div class="row">
-//		<div class="col-xs-12 col-md-12">.col-xs-12 .col-md-12</div>
-//   </div>
-// </div>
+// Layout & Structure	
 //
 // Styleguide 2.0
 
-.container--full{
-	padding-left: 0;
-	padding-right: 0;
+// Layout & Structure: Flexbox
+//
+// Flexbox: 
+// The Flexbox Layout (Flexible Box) module (currently a W3C Last Call Working Draft) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their 
+// size is unknown and/or dynamic (thus the word "flex").
+// 
+// The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices 
+// and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.
+//
+// Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). While those work well for pages, they 
+// lack flexibility (no pun intended) to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).
+//
+// Note: Flexbox layout is most appropriate to the components of an application, and small-scale layouts. 
+// 
+// For additional information on Flexbox, here are some helpful resources https://www.w3.org/TR/css-flexbox-1/, [Css-Tricks: A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+// 
+// markup:
+// <ul class="container">
+//   <li class="child">1</li>
+//   <li class="child">2</li>
+//   <li class="child">3</li>
+//   <li class="child">4</li>
+//   <li class="child">5</li>
+//   <li class="child">6</li>
+// </ul>
+//
+// Styleguide 2.1
+
+.container{
+	display: flex;
+	display: -webkit-flex;
+}
+
+
+// RoboScout UI: Blocks
+//
+// ##### **Blocks:** #####
+// Blocks are simply containers with default padding, background colors and borders to showcase different UI elements. As a default blocks layouts utilize Flexbox layouts for easy positioning and control of
+// child elements. 
+//
+// default - Standard White box with a light gray border (style used for RSP Dashboard drilldown and containers)
+// grey-bg - light grey background for stacking blocks and adding visual separation of blocks 
+//
+// markup:
+// <section class="block-wrap {$modifiers}">
+//  <ul class="metrics-wrap">
+//   <li role="presentation" class="metric-node clickable {$modifiers}">
+//		<span class="metric-value med">3</span>
+//		<span class="metric-title">Disabled Drives</span>
+//		<span class="icon-one-finger-click"></span>
+//	 </li>
+//   <li role="presentation" class="metric-node clickable">
+//		<span class="metric-value med">2</span>
+//		<span class="metric-title">Station Blocking Andons</span>
+//		<span class="icon-one-finger-click"></span>
+//	 </li>
+//   <li role="presentation" class="metric-node clickable">
+//		<span class="metric-value med">8</span>
+//		<span class="metric-title">Obstructions</span>
+//		<span class="icon-one-finger-click"></span>
+//	 </li>
+//   <li role="presentation" class="metric-node">
+//		<span class="metric-value">5</span>
+//		<span class="metric-title">Blocked Pods</span>
+//	 </li>
+//  </ul>
+// </section>
+//
+// Styleguide 2.2
+.block-wrap {
+	display: -webkit-flex;
+    display: flex;
+  	-webkit-align-items: center;
+    align-items: center;
+  	-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  	-webkit-align-content: space-between;
+    align-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    width: 100%;
+    padding: 0 1%;
+    border: 1px solid $border-gray;
+
+    &.grey-bg {
+    	background: #fbfbfb;
+    }
 }
