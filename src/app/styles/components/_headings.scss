@@ -14,8 +14,10 @@
 // Styleguide 3.1
 
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Lato', sans-serif;
+	font-family: 'BlissPro', sans-serif;
 	color: $dark-grey__font;
+	font-weight: bold;
+	font-style: normal;
 }
 
 // Headings Variations
@@ -138,3 +140,47 @@ p, span, label, strong, em{
 	}
 
 } 
+
+// Typography
+//
+// Primary branded font-family and typography for AR applications. AR Branding guidelines approves three main typography families:  
+// 
+// **BLISS PRO:** Primary headline typography for AR Products to be used for elements such as page titles, large headlines, and h1-h6
+//
+// **HELVETICA NEUE:** Primary paragraph typography to be used for for main paragraph and body text content. 
+//
+// **ARIAL:** Secondary paragraph typography to be used for main paragraph and body text content.
+//
+//
+// **Typography Best Practices:**
+// Whenever possible, AR Branded applications should utilize these brand approved fonts for any typography needs. Additional typography and font-families available should remain cohesive to the aesthetic styling of the brand approved fonts. To ensure legibility, base font colors should be determined by the background color of the parent element. For lighter backgrounds utilize dark font colors between #000000 and #888888. For dark background colors, utilize light font colors between #999999 and #FFFFFF. 
+// 
+// Additional Typographys can be curated and utilized within your application. To assist the search for additional typography needs, [Google Fonts](https://fonts.google.com/) is a great resource for royalty 
+// free webfonts and typographies with customization capabilities for import/embedding webfonts in your UI. Note: Additional typographies may be subject to review by AR branding team. 
+//
+// markup:
+// <h1>Bliss Pro</h1>
+// <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * ( ) _ - +</p>
+// <h1 class="secondary-font">Helvetica Neue</h1>
+// <p class="secondary-font">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * ( ) _ - +</p>
+// <h1 class="tertiary-font">Arial</h1>
+// <p class="tertiary-font">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * ( ) _ - +</p>
+//
+// Styleguide 3.6
+
+h1 {
+	font-family: 'BlissPro', sans-serif;
+	color: $dark-grey__font;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.secondary-font {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-weight: normal;
+}
+
+.tertiary-font {
+	font-family: "Arial", sans-serif;
+	font-weight: normal;
+}

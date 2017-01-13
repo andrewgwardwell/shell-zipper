@@ -22,14 +22,13 @@
 // --ow - off white
 //
 // markup:
-// <div class="swatch swatch{$modifiers}">
-// </div>
+// <div class="swatch swatch{$modifiers}">{$modifiers}</div>
 //
 // Styleguide 1.1
 
 // Blues
 $darkblue: #14347A;
-$midblue: #5991dd;
+$midblue: #30528e;
 $lightblue: #ACBDE3;
 $owblue: #E1E7F2;
 $offblue: #658ec8;
@@ -74,6 +73,29 @@ $dark-grey__font: #868b92;
 //Off White
 $ow: #FCFAFA;
 
+//AR Brand Colors
+$ar-orange: #FF7900;
+$ar-teal: #41C4E1;
+$ar-drk-blue: #214E8E;
+$ar-purple: #6E298D;
+$ar-lgt-grey: #BBBCBC;
+
+
+//Roboscout RSP Dashboard Colors 
+$rs-orange: #ff9e2a;
+$rs-drk-blue: #5f7ca6;
+$rs-med-gray: #77797c;
+$rs-blue: #20a9e4;
+$rs-lgt-gray: #999898;
+$rs-green: #06d981;
+$rs-yellow: #ffc000;
+$rs-red: #da2c40;
+
+
+//Background Colors
+$bg-gray: #e4e8ed;
+$border-gray: #d9dbdf;
+
 // Font Colors
 //
 // --darkblue--color - dark blue
@@ -89,7 +111,47 @@ $ow: #FCFAFA;
 // --ow--color - off white
 //
 // markup:
-//<div class="text-box text-box{$modifiers}"><span>Text Example</span></div>
+// <div class="text-box text-box{$modifiers}"><span>Text Example</span></div>
 //
 // Styleguide 1.2
+
+
+// AR Brand Colors
+//
+// ##### **Colors Best Practices:** #####
+// When selecting colors for you application, first look to the leverage any possible AR Brand Colors. If these colors do not work for your appication or need, please utilize any of the following color g
+// generator tools to create a cohesive color pallette for your UI needs: [colors.io](http://coolors.co/), [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/). Also tools such as [collor.com]
+// (http://colllor.com/) can assist with selecting different hue values for active, hover states for elements. 	
+//
+// --ar-orange - Orange Primary
+// --ar-teal - Teal
+// --ar-drk-blue - Dark Blue
+// --ar-purple - Purple
+// --ar-lgt-grey - Light Gray
+//
+// markup:
+// <div class="swatch swatch{$modifiers}">{$	modifiers}</div>
+//
+// Styleguide 1.3
+
+
+// RoboScout Dashboard Colors
+//
+//
+// ##### **Colors** #####
+//
+// --rs-orange - Alert Orange
+// --rs-drk-blue - Dark Blue
+// --rs-med-gray - Medium Gray
+// --rs-blue - Blue 
+// --rs-lgt-gray - Light Gray
+// --rs-red - Red
+// --rs-yellow - Yellow
+// --rs-green - Green
+// --bg-gray - Background Gray for Dashbaord pages
+//
+// markup:
+// <div class="swatch swatch{$modifiers}">{$modifiers}</div>
+//
+// Styleguide 1.4
 
