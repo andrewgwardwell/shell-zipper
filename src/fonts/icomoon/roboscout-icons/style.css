@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'roboscout-icons';
+  src:  url('fonts/roboscout-icons.eot?5xh1x3');
+  src:  url('fonts/roboscout-icons.eot?5xh1x3#iefix') format('embedded-opentype'),
+    url('fonts/roboscout-icons.ttf?5xh1x3') format('truetype'),
+    url('fonts/roboscout-icons.woff?5xh1x3') format('woff'),
+    url('fonts/roboscout-icons.svg?5xh1x3#roboscout-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'roboscout-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add-circle:before {
+  content: "\e900";
+}
+.icon-alert-icon:before {
+  content: "\e90a";
+}
+.icon-alerts-bell:before {
+  content: "\e90b";
+}
+.icon-collapse-icon:before {
+  content: "\e90c";
+}
+.icon-down-arrow:before {
+  content: "\e90d";
+}
+.icon-expand-icon:before {
+  content: "\e90e";
+}
+.icon-left-arrow:before {
+  content: "\e90f";
+}
+.icon-link:before {
+  content: "\e910";
+}
+.icon-right-arrow:before {
+  content: "\e911";
+}
+.icon-shield:before {
+  content: "\e912";
+}
+.icon-up-arrow:before {
+  content: "\e913";
+}
+.icon-pencil:before {
+  content: "\e901";
+}
+.icon-check2:before {
+  content: "\e935";
+}
+.icon-playlist_add_check:before {
+  content: "\e922";
+}
+.icon-playlist_add:before {
+  content: "\e923";
+}
+.icon-leak_add:before {
+  content: "\e924";
+}
+.icon-search:before {
+  content: "\e902";
+}
+.icon-open_in_browser:before {
+  content: "\e903";
+}
+.icon-open_in_new:before {
+  content: "\e904";
+}
+.icon-folder_open:before {
+  content: "\e905";
+}
+.icon-subdirectory_arrow_right:before {
+  content: "\e906";
+}
+.icon-subdirectory_arrow_left:before {
+  content: "\e907";
+}
+.icon-square-check:before {
+  content: "\e92f";
+}
+.icon-circle-check:before {
+  content: "\e933";
+}
+.icon-check:before {
+  content: "\e934";
+}
+.icon-trash:before {
+  content: "\e925";
+}
+.icon-circle-minus:before {
+  content: "\e926";
+}
+.icon-minus2:before {
+  content: "\e927";
+}
+.icon-plus:before {
+  content: "\e928";
+}
+.icon-square-cross:before {
+  content: "\e929";
+}
+.icon-circle-cross:before {
+  content: "\e92a";
+}
+.icon-cross:before {
+  content: "\e92b";
+}
+.icon-arrow-right:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-trashcan:before {
+  content: "\e92d";
+}
+.icon-eye:before {
+  content: "\e914";
+}
+.icon-pencil2:before {
+  content: "\e915";
+}
+.icon-search2:before {
+  content: "\e916";
+}
+.icon-move:before {
+  content: "\e917";
+}
+.icon-sunrise:before {
+  content: "\e918";
+}
+.icon-dawn:before {
+  content: "\e918";
+}
+.icon-weather:before {
+  content: "\e918";
+}
+.icon-sun:before {
+  content: "\e919";
+}
+.icon-weather2:before {
+  content: "\e919";
+}
+.icon-pencil22:before {
+  content: "\e91a";
+}
+.icon-copy:before {
+  content: "\e92c";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
+.icon-folder-plus:before {
+  content: "\e931";
+}
+.icon-folder-minus:before {
+  content: "\e932";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-drawer:before {
+  content: "\e95c";
+}
+.icon-drawer2:before {
+  content: "\e95d";
+}
+.icon-floppy-disk:before {
+  content: "\e962";
+}
+.icon-eye2:before {
+  content: "\e9ce";
+}
+.icon-loop2:before {
+  content: "\ea2e";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-edge:before {
+  content: "\eadc";
+}
+.icon-safari:before {
+  content: "\eadd";
+}
+.icon-opera:before {
+  content: "\eade";
+}
+.icon-calendar:before {
+  content: "\e91b";
+}
+.icon-minus:before {
+  content: "\e92e";
+}
+.icon-back-in-time:before {
+  content: "\e91c";
+}
+.icon-search22:before {
+  content: "\e91d";
+}
+.icon-one-finger-click:before {
+  content: "\e91e";
+}
+.icon-lock-open:before {
+  content: "\e91f";
+}
+.icon-lock:before {
+  content: "\e920";
+}
+.icon-sunset:before {
+  content: "\e921";
+}
+
