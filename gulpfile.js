@@ -32,6 +32,6 @@ gulp.task('default', ['clean'], function () {
 gulp.task('img', function() {
   gulp.src(['img/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/img'))
-    .pipe(gulp.dest(outputPath + '/img'));
+    .pipe(gulp.dest('src/assets' + '/img'))
+    .pipe(gulp.dest('output/assets' + '/img'));
 });
